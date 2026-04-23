@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#3B82F6" />
+  <title>Paz Escolar</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════
+     APP SHELL
+══════════════════════════════════ -->
+<div id="app">
+
+  <!-- ── Top bar ── -->
+  <header class="top-bar">
+    <span class="top-bar__logo">🕊️</span>
+    <span class="top-bar__title">Paz Escolar</span>
+  </header>
+
+  <!-- ══════════════════════════════
+       TAB 1 – INICIO
+  ══════════════════════════════ -->
+  <section id="tab-inicio" class="tab-content active">
+    <div class="section-hero">
+      <h2 class="section-title">¡Bienvenido/a! 👋</h2>
+      <p class="section-subtitle">Aprende a convivir mejor en tu escuela</p>
+    </div>
+
+    <!-- Tips -->
+    <h3 class="block-title">💡 Consejos de Convivencia</h3>
+    <div class="cards-list">
+
+      <div class="card card--tip">
+        <span class="card__icon">🤝</span>
+        <div class="card__body">
+          <h4>Respeta las diferencias</h4>
+          <p>Cada persona es única. Valorar lo que nos hace distintos nos hace más fuertes como comunidad escolar.</p>
+        </div>
+      </div>
+
+      <div class="card card--tip">
+        <span class="card__icon">👂</span>
+        <div class="card__body">
+          <h4>Escucha activamente</h4>
+          <p>Antes de responder, escucha con atención. Entender al otro es el primer paso para resolver cualquier conflicto.</p>
+        </div>
+      </div>
+
+      <div class="card card--tip">
+        <span class="card__icon">🗣️</span>
+        <div class="card__body">
+          <h4>Habla con respeto</h4>
+          <p>Elige tus palabras con cuidado. Las palabras tienen el poder de construir o destruir relaciones.</p>
+        </div>
+      </div>
+
+      <div class="card card--tip">
+        <span class="card__icon">🙏</span>
+        <div class="card__body">
+          <h4>Pide disculpas cuando te equivocas</h4>
+          <p>Reconocer los errores y pedir perdón es señal de madurez y fortaleza, no de debilidad.</p>
+        </div>
+      </div>
+
+      <div class="card card--tip">
+        <span class="card__icon">🌟</span>
+        <div class="card__body">
+          <h4>Incluye a todos</h4>
+          <p>Nadie debería sentirse solo. Invitar a alguien a sumarse es un gesto pequeño con un gran impacto.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- YouTube Videos -->
+    <h3 class="block-title">🎬 Videos Recomendados</h3>
+    <div class="video-list">
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=Yd5hHMjdA2Y" target="_blank" rel="noopener">
+        <div class="video-thumb" style="background:#dbeafe;">
+          <span class="play-icon">▶</span>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">Convivencia</span>
+          <h4>¿Cómo mejorar la convivencia escolar?</h4>
+          <p>Estrategias prácticas para un mejor ambiente en clase.</p>
+        </div>
+      </a>
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=wNVLz7jOFbU" target="_blank" rel="noopener">
+        <div class="video-thumb" style="background:#dcfce7;">
+          <span class="play-icon">▶</span>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">Empatía</span>
+          <h4>El poder de la empatía en la escuela</h4>
+          <p>Cómo ponerse en el lugar del otro transforma las relaciones.</p>
+        </div>
+      </a>
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=jOfFHXbNTtI" target="_blank" rel="noopener">
+        <div class="video-thumb" style="background:#fef9c3;">
+          <span class="play-icon">▶</span>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">Resolución de conflictos</span>
+          <h4>Resolver conflictos sin violencia</h4>
+          <p>Herramientas para manejar disputas de manera pacífica.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       TAB 2 – ALERTA
+  ══════════════════════════════ -->
+  <section id="tab-alerta" class="tab-content">
+    <div class="section-hero section-hero--alerta">
+      <h2 class="section-title">Zona de Calma 🌬️</h2>
+      <p class="section-subtitle">Técnicas para manejar la ansiedad</p>
+    </div>
+
+    <!-- Breathing Techniques -->
+    <h3 class="block-title">🫁 Técnicas de Respiración</h3>
+
+    <!-- Interactive breathing exercise -->
+    <div class="breathing-widget">
+      <p class="breathing-label" id="breathing-label">Presiona para comenzar</p>
+      <div class="breathing-circle" id="breathing-circle" onclick="startBreathing()">
+        <span id="breathing-text">▶</span>
+      </div>
+      <p class="breathing-hint" id="breathing-hint">Técnica 4-7-8: inhala 4s, retén 7s, exhala 8s</p>
+    </div>
+
+    <div class="cards-list">
+
+      <div class="card card--alerta">
+        <span class="card__icon">4️⃣</span>
+        <div class="card__body">
+          <h4>Respiración 4-7-8</h4>
+          <p><strong>Inhala</strong> por la nariz contando 4 segundos → <strong>Retén</strong> el aire 7 segundos → <strong>Exhala</strong> lentamente por la boca 8 segundos. Repite 4 veces.</p>
+        </div>
+      </div>
+
+      <div class="card card--alerta">
+        <span class="card__icon">📦</span>
+        <div class="card__body">
+          <h4>Respiración en Caja (Box Breathing)</h4>
+          <p><strong>Inhala</strong> 4s → <strong>Retén</strong> 4s → <strong>Exhala</strong> 4s → <strong>Pausa</strong> 4s. Repite hasta sentirte tranquilo/a.</p>
+        </div>
+      </div>
+
+      <div class="card card--alerta">
+        <span class="card__icon">🌸</span>
+        <div class="card__body">
+          <h4>Respiración Nariz Alternada</h4>
+          <p>Tapa la fosa derecha e <strong>inhala</strong> por la izquierda → Tapa ambas → Destapa la derecha y <strong>exhala</strong>. Alterna durante 2 minutos.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Calming Games -->
+    <h3 class="block-title">🎮 Juegos para Calmarte</h3>
+
+    <!-- Bubble Pop Game -->
+    <div class="game-card">
+      <h4 class="game-title">🫧 Revienta Burbujas</h4>
+      <p class="game-desc">Toca cada burbuja para hacerla estallar. ¡Intenta reventarlas todas!</p>
+      <div class="bubble-grid" id="bubble-grid"></div>
+      <button class="btn btn--secondary" onclick="resetBubbles()">Reiniciar burbujas</button>
+    </div>
+
+    <!-- Countdown Timer -->
+    <div class="game-card">
+      <h4 class="game-title">⏱️ Cuenta Regresiva de la Calma</h4>
+      <p class="game-desc">Observa el contador y respira lentamente hasta que llegue a cero.</p>
+      <div class="countdown-display" id="countdown-display">60</div>
+      <div class="countdown-buttons">
+        <button class="btn btn--secondary" onclick="startCountdown()">Iniciar</button>
+        <button class="btn btn--ghost" onclick="resetCountdown()">Reiniciar</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════
+       TAB 3 – AYUDA
+  ══════════════════════════════ -->
+  <section id="tab-ayuda" class="tab-content">
+    <div class="section-hero section-hero--ayuda">
+      <h2 class="section-title">Situaciones de Bullying 🛡️</h2>
+      <p class="section-subtitle">Cómo reconocerlas y sobrellevarlas</p>
+    </div>
+
+    <p class="info-text">Toca cada situación para ver consejos de cómo actuar.</p>
+
+    <div class="accordion" id="accordion-ayuda">
+
+      <div class="accordion__item">
+        <button class="accordion__header" onclick="toggleAccordion(this)">
+          <span>😔 Te insultan o se burlan de ti</span>
+          <span class="accordion__arrow">▼</span>
+        </button>
+        <div class="accordion__body">
+          <ul>
+            <li>No respondas con insultos; mantén la calma y aléjate.</li>
+            <li>Dile a un adulto de confianza (maestro, familiar) lo que ocurre.</li>
+            <li>Recuerda: el problema es de quien agrede, no tuyo.</li>
+            <li>Escribe lo que pasó (fecha, lugar, quiénes estaban) para tener evidencia.</li>
+            <li>Busca amigos que te apoyen y con quienes te sientas seguro/a.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__header" onclick="toggleAccordion(this)">
+          <span>🚫 Te excluyen del grupo</span>
+          <span class="accordion__arrow">▼</span>
+        </button>
+        <div class="accordion__body">
+          <ul>
+            <li>Busca actividades o clubes donde puedas conocer personas con intereses similares.</li>
+            <li>Habla con un orientador escolar sobre la situación.</li>
+            <li>Recuerda que tu valor no depende de la aceptación de un grupo.</li>
+            <li>Invierte tiempo en personas que sí te valoran.</li>
+            <li>Practica actividades que disfrutes para fortalecer tu autoestima.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__header" onclick="toggleAccordion(this)">
+          <span>💻 Cyberbullying (acoso en redes)</span>
+          <span class="accordion__arrow">▼</span>
+        </button>
+        <div class="accordion__body">
+          <ul>
+            <li>Toma capturas de pantalla de los mensajes ofensivos como evidencia.</li>
+            <li>Bloquea y reporta al agresor en la plataforma.</li>
+            <li>No respondas a las provocaciones; ignorar puede desalentar al agresor.</li>
+            <li>Informa a tus padres o un adulto de confianza inmediatamente.</li>
+            <li>Considera una pausa temporal de las redes sociales para cuidar tu bienestar.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__header" onclick="toggleAccordion(this)">
+          <span>👊 Agresión física</span>
+          <span class="accordion__arrow">▼</span>
+        </button>
+        <div class="accordion__body">
+          <ul>
+            <li>Tu seguridad es lo primero: aléjate de la situación de peligro.</li>
+            <li>Reporta inmediatamente a un maestro, director o familiar.</li>
+            <li>Si tienes lesiones, busca atención médica.</li>
+            <li>Documenta lo sucedido con fecha, hora y testigos.</li>
+            <li>No tomes represalias; deja que los adultos responsables actúen.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__header" onclick="toggleAccordion(this)">
+          <span>😰 Sientes miedo de ir a la escuela</span>
+          <span class="accordion__arrow">▼</span>
+        </button>
+        <div class="accordion__body">
+          <ul>
+            <li>Habla con alguien de tu familia sobre cómo te sientes.</li>
+            <li>Pide al orientador que te ayude a elaborar un plan de seguridad.</li>
+            <li>Identifica rutas o lugares seguros dentro de la escuela.</li>
+            <li>Acompaña o pide ser acompañado/a en los trayectos si es necesario.</li>
+            <li>Recuerda que tienes derecho a estudiar en un ambiente seguro.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__header" onclick="toggleAccordion(this)">
+          <span>📣 Eres testigo de bullying</span>
+          <span class="accordion__arrow">▼</span>
+        </button>
+        <div class="accordion__body">
+          <ul>
+            <li>No te rías ni alientes al agresor; tu reacción importa.</li>
+            <li>Si es seguro, di claramente que ese comportamiento está mal.</li>
+            <li>Acompaña a la víctima para que no se sienta sola.</li>
+            <li>Reporta lo que viste a un adulto responsable.</li>
+            <li>Ser un testigo activo puede salvar a alguien de mucho sufrimiento.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="help-banner">
+      <span>📞</span>
+      <div>
+        <strong>Línea de ayuda escolar</strong>
+        <p>Si estás en peligro, habla con un adulto de confianza o llama a servicios de emergencia.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════
+       TAB 4 – HELPPI
+  ══════════════════════════════ -->
+  <section id="tab-helppi" class="tab-content">
+    <div class="section-hero section-hero--helppi">
+      <h2 class="section-title">Botón de Emergencia 🆘</h2>
+      <p class="section-subtitle">Envía una alerta a tus contactos de confianza</p>
+    </div>
+
+    <!-- BIG RED BUTTON -->
+    <div class="helppi-center">
+      <button class="helppi-btn" id="helppi-btn" onclick="sendHelppiAlert()">
+        <span class="helppi-btn__icon">🆘</span>
+        <span class="helppi-btn__label">HELPPI</span>
+        <span class="helppi-btn__sub">Presiona para pedir ayuda</span>
+      </button>
+    </div>
+
+    <p class="helppi-info">Al presionar el botón se abrirá WhatsApp con un mensaje de alerta para cada contacto registrado.</p>
+
+    <!-- Alert sent confirmation -->
+    <div id="helppi-confirmation" class="helppi-confirmation hidden">
+      ✅ ¡Alerta enviada! Tus contactos han sido notificados.
+    </div>
+
+    <!-- Contact Registration -->
+    <div class="contact-section">
+      <h3 class="block-title">👥 Mis Contactos de Confianza</h3>
+
+      <form class="contact-form" onsubmit="addContact(event)">
+        <div class="form-group">
+          <label for="contact-name">Nombre</label>
+          <input id="contact-name" type="text" placeholder="Ej. Mamá, Papá, Profe García" maxlength="40" required />
+        </div>
+        <div class="form-group">
+          <label for="contact-phone">Número de WhatsApp</label>
+          <input id="contact-phone" type="tel" placeholder="Ej. 521234567890 (con código de país)" maxlength="20" required />
+        </div>
+        <button class="btn btn--primary" type="submit">➕ Agregar contacto</button>
+      </form>
+
+      <p class="form-hint">Incluye el código de país sin + (Ej. México: 52, España: 34)</p>
+
+      <div id="contact-list" class="contact-list">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════
+       BOTTOM NAVIGATION
+  ══════════════════════════════ -->
+  <nav class="bottom-nav">
+    <button class="nav-btn active" data-tab="inicio" onclick="switchTab('inicio', this)">
+      <span class="nav-icon">🏠</span>
+      <span class="nav-label">Inicio</span>
+    </button>
+    <button class="nav-btn" data-tab="alerta" onclick="switchTab('alerta', this)">
+      <span class="nav-icon">🌬️</span>
+      <span class="nav-label">Alerta</span>
+    </button>
+    <button class="nav-btn" data-tab="ayuda" onclick="switchTab('ayuda', this)">
+      <span class="nav-icon">🛡️</span>
+      <span class="nav-label">Ayuda</span>
+    </button>
+    <button class="nav-btn nav-btn--helppi" data-tab="helppi" onclick="switchTab('helppi', this)">
+      <span class="nav-icon">🆘</span>
+      <span class="nav-label">HELPPI</span>
+    </button>
+  </nav>
+
+</div><!-- end #app -->
+
+<script src="app.js"></script>
+</body>
+</html>
